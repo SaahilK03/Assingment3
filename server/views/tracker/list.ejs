@@ -1,0 +1,52 @@
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
+
+<!--Main Content-->
+<main>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-offset-3 col-md-8">
+        <h1><%= title %></h1>
+        <a href="/w-track/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Workout
+        </a>
+        <br>
+        <br>
+        <table class= "table table-bordered table-striped table-hover">
+        <tr>
+        <th class="text-centre col-3">WorkoutName</th>
+        <th class="text-centre col-1">Sets</th>
+        <th class="text-centre col-1">Reps</th>
+        <th class="text-centre col-1">Weight</th>
+        <th class="text-centre col-1"></th>
+        <th class="text-centre col-1"></th>
+        </tr>
+        <!--Repeat template -->
+        <% for(let count=0; count<Trackerlist.length; count++) { %>
+            <tr>
+            <td class="text-centre col-3"><%= Trackerlist[count].WorkoutName %></td>
+            <td class="text-centre col-1"><%= Trackerlist[count].Sets %></td>
+            <td class="text-centre col-1"><%= Trackerlist[count].Reps %></td>
+            <td class="text-centre col-1"><%= Trackerlist[count].Weight %></td>
+            <td class="text-centre">
+                <a href="/w-track/edit/<%=Trackerlist[count]._id %>"
+                    class= "btn btn-success"> 
+                    <i class="fas fa-pencil-alt"></i> Edit </a>
+                    
+            </td>
+            <td class="text-centre col-1">
+                <a href="/w-track/delete/<%=Trackerlist[count]._id %>"
+                    class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete </a>
+                </td>
+
+            </tr>
+        <% } %>
+        </table>
+        </table>
+        </div>
+    </div>
+</main>
+
+<%- include ('../partials/bottom_nav.ejs') %>
+<%- include ('../partials/footer.ejs') %>

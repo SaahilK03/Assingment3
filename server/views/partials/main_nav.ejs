@@ -1,0 +1,60 @@
+<!--NavBar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #FFA500;">
+  <div class="container-fluid">
+  <!--logo button-->
+    <a class="navbar-brand" href="/home"><img src=../Assets/images/logo.jpg alt="logo" height="55px" width="120px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+<div class="collapse navbar-collapse"></div>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"> 
+
+        <li class="nav-item">
+        <% if (title == "Home") { %>
+          <a class="nav-link active" href="/home">
+        <% } else { %>
+          <a class="nav-link" href="/home">
+        <% } %>
+        <!--button logo here-->
+          <i class="fa-solid fa-house"></i> Home</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "Tracker") { %>
+          <a class="nav-link active" href="/w-track">
+        <% } else { %>
+          <a class="nav-link" href="/w-track">
+        <% } %>
+        <!--button logo here-->
+          <i class="fa-sharp fa-solid fa-dumbbell"></i>
+           Tracker</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "About") { %>
+          <a class="nav-link active" href="/home#about">
+        <% } else { %>
+          <a class="nav-link" href="/home#about">
+        <% } %>
+        <!--button logo here-->
+          <i class="fa-solid fa-envelope-open"></i>
+           About</a>
+        </li>        
+
+        <li class="nav-item">
+        <% if (title == "Contact") { %>
+          <a class="nav-link active" href="/home#contact">
+        <% } else { %>
+          <a class="nav-link" href="/home#contact">
+        <% } %>
+        <!--button logo here-->
+          <i class="fa-solid fa-message"></i> 
+          Contact</a>
+        </li>
+
+    </div>
+  </div>
+</nav>

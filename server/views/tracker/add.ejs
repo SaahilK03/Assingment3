@@ -1,0 +1,54 @@
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
+
+<!--Add page content-->
+<div class="container">
+    <div class ="row"> 
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%=title %></h1>
+            <form class = "form" method = "post"> 
+                <div class="form-group">
+                    <label for = "nameTextField"><b>Workout Name</b></label>
+                    <input type = "text" class= "form-control"
+                    id="nameTextField"
+                    placeholder = "Enter the name of the workout"
+                    name ="WorkoutName" required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "setsTextField"><b>Sets</a></b> </label>
+                    <input type = "text" class= "form-control"
+                    id="setsTextField"
+                    placeholder = "Enter number of sets"
+                    name ="Sets" required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "repsTextField"><b>Reps</b></label>
+                    <input type = "text" class= "form-control"
+                    id="repsTextField"
+                    placeholder = "Enter amount of Reps"
+                    name ="Reps" required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "weightTextField"><b>Weight</b></label>
+                    <input type = "text" class= "form-control"
+                    id="weightTextField"
+                    placeholder = "Enter the Weight"
+                    name ="Weight" required>
+                </div> 
+                <br>
+                <button class= "btn btn-success" type="submit"> 
+                    <i class="fa-solid fa-floppy-disk"></i> Save
+                </button>
+
+                <a href = "/w-track/" class="btn btn-danger">
+                    <i class="fa-solid fa-xmark"></i> Cancel </a>
+            </form>
+        </div>
+    </div> 
+</div>
+
+<%- include ('../partials/bottom_nav.ejs') %>
+<%- include ('../partials/footer.ejs') %>

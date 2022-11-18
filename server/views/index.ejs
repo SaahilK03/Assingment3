@@ -1,0 +1,53 @@
+<%- include('./partials/header.ejs') %>
+<%- include ('./partials/main_nav.ejs') %>
+<!-- Homepage -->
+<main>
+  <div class="jumbotron jumbotron-fluid">
+  <div id="homepage">
+    <h1 class="display-1"><strong>Track Your Gains</strong></h1>
+    <h2 class="display-1"><strong>EzPz</strong></h2>
+  </div>
+
+  <!--about section-->
+  <div id="about">
+    <h1 class="display-6">About Us</h1>
+    <h2 class="display-5">All of us at EzPz are delighted you are considereing using our program to help you look, feel and be the best version of yourself.</h2>
+    <h2 class="display-5">EzPz is an exercise tracking application that allows you to keep track of your sets, reps, weight amount and much more!</h2>
+    <h2 class="display-5">Let us help you take control of our product and your life!</h2>
+  </div>
+
+  <!--Contact Section-->
+  <div id="contact">
+    <form action="mailto:saahil.kassam@ontariotechu.net" ?subject="Signup" Form method="post" enctype="text/plain">
+            <p> 
+                <div id="form">
+                    <div id="title"><h2>Contact Us</h2></div>
+                    <div id="Emailbox">
+                        <label for="email">Email</label>
+                        <input type="email" name="Email" size="32" autocomplete="off" required>
+                    </div>
+    
+                    <div id="Namebox">
+                        <label for="name">Name</label>
+                    <input type="text" name="name" size="32" autocomplete="off" required>
+                    </div>
+                    
+                    <div id="Messagebox">
+                        <label for="message">Message</label>
+                        <input type="text" name="message" size="32" autocomplete="off" required style="height: 150px;">
+                    </div>
+                    
+                    <div id="Submit">
+                        <input type="Submit" value="Submit">
+                    </div>
+                </div>  
+            </p>
+        </form>
+
+
+
+</main>
+<%- ('./include partials/bottom_nav.ejs') %>
+<%- ('./include partials/footer.ejs') %>
+
+
